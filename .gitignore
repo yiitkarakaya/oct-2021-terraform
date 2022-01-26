@@ -4,6 +4,7 @@
 
 # .tfstate files
 *.tfstate
+
 *.tfstate.*
 
 # Crash log files
@@ -30,3 +31,4 @@ override.tf.json
 # example: *tfplan*
 IAM/.terraform.lock.hcl
 Class2/.terraform.lock.hcl
+Class2/module/.terraform.lock.hcl
