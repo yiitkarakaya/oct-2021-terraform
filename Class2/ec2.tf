@@ -1,3 +1,5 @@
+#  Pulls AMI ID from AWS Region
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
