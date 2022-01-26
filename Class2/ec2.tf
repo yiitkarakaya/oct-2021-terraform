@@ -23,14 +23,17 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.ec2-class-sec-group.id]
   associate_public_ip_address = true
   availability_zone = "us-east-1a"
+  tags = local.common_tags
 }
 
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-east-1a"
   size              = 40
+  tags = local.common_tags
 }
 resource "aws_volume_attachment" "ebs_att" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.example.id
   instance_id = aws_instance.web.id
+  
 }
