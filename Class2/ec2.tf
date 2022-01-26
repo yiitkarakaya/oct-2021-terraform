@@ -34,3 +34,7 @@ resource "aws_instance" "web2" {
   vpc_security_group_ids = [aws_security_group.ec2-class-sec-group.id]
   associate_public_ip_address = true
 }
+
+resource "aws_instance" "class" {
+  # (resource arguments)
+}
