@@ -15,7 +15,7 @@ resource "google_compute_instance" "vm_instance" {
 	tags = [var.vm_config["network_tags"]]
     metadata_startup_script = file("startup.sh")
 	metadata = {
-		ssh-keys = "debian:${file("~/.ssh/id_rsa.pub")}"
+		ssh-keys = "debian:${file("~/.ssh/id_rsa.pub")}bob:${file("~/.ssh/id_rsa.pub")}"
     }
 }
 
