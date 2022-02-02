@@ -32,3 +32,4 @@ override.tf.json
 IAM/.terraform.lock.hcl
 Class2/.terraform.lock.hcl
 Class2/module/.terraform.lock.hcl
+Class5/.terraform.lock.hcl
