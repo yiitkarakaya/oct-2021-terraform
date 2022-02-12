@@ -12,7 +12,7 @@ variable "ssh_private_key_file" {
 	default = "~/.ssh/id_rsa"
 }
 variable "ssh_keypair_name" {
-	default = "bastion"
+	default = "packer"
 }
 variable "source_ami_name" {
 	default = "CentOS Linux 7 x86_64 HVM EBS ENA 1901_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-*"
