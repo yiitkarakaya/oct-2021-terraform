@@ -24,7 +24,7 @@ variable "ssh_username" {
 	default = "centos"
 }
 variable "ami_name" {
-	default = "bastion"
+	default = "wordpress"
 }
 variable "region" {
 	default = "us-east-2"

@@ -1,6 +1,6 @@
 ssh_private_key_file = "/home/ec2-user/.ssh/id_rsa"
 ssh_keypair_name     = "packer"
-ami_name             = "packerclass"
+ami_name             = "wordpress"
 region               = "us-east-2"
 instance_type        = "t2.micro"
 
