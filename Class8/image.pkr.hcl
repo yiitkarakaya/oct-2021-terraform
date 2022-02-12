@@ -42,7 +42,13 @@ variable "ami_regions" {
         "ap-southeast-1"
     ]
 }
-
+variable "account_ids" {
+    default = [ 
+        "541906215541",  # Emrahs account 
+        "316364547517",  # Aziz Velat
+        "762642917186",  # Dilnaz
+    ]
+}
 
 
 source "amazon-ebs" "image" {
@@ -53,6 +59,7 @@ source "amazon-ebs" "image" {
 	ssh_username         = "${var.ssh_username}"
 	region               = "${var.region}"
     ami_regions          = "${var.ami_regions}"
+    ami_users            = "${var.account_ids}"
 	source_ami_filter {
 		most_recent = true
 		owners      = ["${var.owners}"]
