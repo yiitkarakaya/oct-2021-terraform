@@ -34,7 +34,14 @@ variable "owners" {
 }
 
 
-
+variable "ami_regions" {
+    default = [ 
+        "us-east-1", 
+        "ca-central-1", 
+        "eu-west-1", 
+        "ap-southeast-1"
+    ]
+}
 
 
 
@@ -45,6 +52,7 @@ source "amazon-ebs" "image" {
 	instance_type        = "${var.instance_type}"
 	ssh_username         = "${var.ssh_username}"
 	region               = "${var.region}"
+    ami_regions          = "${var.ami_regions}"
 	source_ami_filter {
 		most_recent = true
 		owners      = ["${var.owners}"]
