@@ -58,7 +58,7 @@ source "amazon-ebs" "image" {
 	instance_type        = "${var.instance_type}"
 	ssh_username         = "${var.ssh_username}"
 	region               = "${var.region}"
-    ami_regions          = "${var.ami_regions}"
+    // ami_regions          = "${var.ami_regions}"
     ami_users            = "${var.account_ids}"
 	source_ami_filter {
 		most_recent = true
