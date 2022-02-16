@@ -14,4 +14,4 @@ sudo yum install awscli -y
 
 
 # Run this command 
-# bash localscript.sh
+# bash localscripts.sh
