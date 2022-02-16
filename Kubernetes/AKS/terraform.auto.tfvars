@@ -1,6 +1,6 @@
 aks_config = {
-	// client_id = ""
-	// client_secret = ""
+	client_id = ""
+	client_secret = ""
 	cluster_name = "my-cluster" 
 	
 	adgroup_name = "AKS-cluster-admins"
