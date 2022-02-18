@@ -38,3 +38,7 @@ Team1/.terraform.lock.hcl
 Team2/.terraform.lock.hcl
 Team1/backend.tf
 Kubernetes/EKS/.terraform.lock.hcl
+SDLC/dev.tfplan
+SDLC/farrukh.tfplan
+SDLC/qa.tfplan
+SDLC/stage.tfplan
