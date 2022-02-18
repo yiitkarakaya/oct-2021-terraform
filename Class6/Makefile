@@ -9,7 +9,7 @@ tf-init : check-envs
 		terraform workspace select $(ENVIRONMENT) || terraform workspace new $(ENVIRONMENT)
 tf-plan : tf-init
 		terraform plan -var-file=envs/$(ENVIRONMENT).tfvars -out=$(ENVIRONMENT).tfplan
-tf-apply : tf-init
+tf-apply : tf-plan
 		terraform apply $(ENVIRONMENT).tfplan
 tf-destroy : tf-init
 		terraform destroy -var-file=envs/$(ENVIRONMENT).tfvars --auto-approve
