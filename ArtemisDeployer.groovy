@@ -1,26 +1,12 @@
 node {
-	properties([parameters([
-	choice(choices: [
-	'1.0.0', 
-	'2.0.0', 
-	'3.0.0', 
-	'4.0.0',
-	'5.0.0',
-	'6.0.0',
-	'7.0.0',
-	'8.0.0',
-	'9.0.0',
-    '10.0.0',
-	], 
-	description: 'Which version of the app should I deploy? ', 
-	name: 'Version'), 
-	(choices: [
-        '54.234.188.67', 
-        '54.82.171.155', 
-        '34.229.148.18', 
-        '54.221.51.121'], 
-    description: 'Please choose IPs', name: 'ENVIR'))])])
-	stage("Stage1"){
+	properties([parameters([choice(choices: ['54.82.171.155', '34.229.148.18', '54.234.188.67'], description: 'Please provide the IP ', name: 'ENVIR'), choice(choices: ['1.0.0', '2.0.0', '3.0.0'], description: 'Please choose app version', name: 'APP_VERSION')])])
+	
+    
+    
+    
+    
+    
+    stage("Stage1"){
 		timestamps {
 			ws {
 				checkout([$class: 'GitSCM', branches: [[name: '${Version}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/farrukh90/artemis.git']]])
