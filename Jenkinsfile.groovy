@@ -1,6 +1,8 @@
 properties([
-    parameters([string(defaultValue: 'dev', description: 'Please provide the environment to build', name: 'ENVIR')]), 
-    pipelineTriggers([cron('* * * * *')])])
+    parameters([string(defaultValue: 'apply', description: 'Apply/Destroy', name: 'ACTION'), 
+    choice(choices: ['dev', 'qa', 'stage', 'prod'], description: 'Please provide environments', name: 'ENVIR')]), 
+    pipelineTriggers([cron('* * * * *')])]
+    )
 
 node {
     
