@@ -14,12 +14,12 @@ node {
 	], 
 	description: 'Which version of the app should I deploy? ', 
 	name: 'Version'), 
-	
-    
-    
-    string(defaultValue: 'PLEASE_ENTER_IP', 
-	description: 'Which environment should I build the app?', 
-	name: 'ENVIR', trim: true)])])
+	(choices: [
+        '54.234.188.67', 
+        '54.82.171.155', 
+        '34.229.148.18', 
+        '54.221.51.121'], 
+    description: 'Please choose IPs', name: 'ENVIR'))])])
 	stage("Stage1"){
 		timestamps {
 			ws {
