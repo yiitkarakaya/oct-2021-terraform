@@ -1,6 +1,8 @@
 node {
     stage('Preparation') {
-        echo "Hello World"
+        timestamps {
+            echo "Hello World"
+        }
     }
     stage('Build') {
     }
