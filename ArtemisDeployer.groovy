@@ -10,6 +10,7 @@ node {
 	'7.0.0',
 	'8.0.0',
 	'9.0.0',
+    '10.0.0',
 	], 
 	description: 'Which version of the app should I deploy? ', 
 	name: 'Version'), 
