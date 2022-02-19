@@ -1,8 +1,6 @@
 properties([
-    buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10')), 
+    parameters([string(defaultValue: 'dev', description: 'Please provide the environment to build', name: 'ENVIR')]), 
     pipelineTriggers([cron('* * * * *')])])
-
-
 
 node {
     
