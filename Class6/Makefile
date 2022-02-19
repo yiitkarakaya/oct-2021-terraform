@@ -4,6 +4,7 @@ check-envs :
 		echo "ENVIRONMENT must be set; export ENVIRONMENT"; exit 1; \
 		fi
 tf-init : check-envs
+		if [ terraform0.14 == true ]; then \
 		terraform init -upgrade
 		terraform get -update
 		terraform workspace select $(ENVIRONMENT) || terraform workspace new $(ENVIRONMENT)
