@@ -4,15 +4,21 @@ properties([
     pipelineTriggers([cron('* * * * *')])]
     )
 
+
+
+
+
+
 node {
-    
     stage('Preparation') {
         timestamps {
             echo "Hello World"
         }
     }
     stage('Build') {
+        build 'Freestyle1'
     }
     stage('Results') {
+        emailext body: 
     }
 }
