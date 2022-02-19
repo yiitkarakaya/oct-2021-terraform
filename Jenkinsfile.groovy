@@ -1,4 +1,14 @@
+properties(
+    [
+        pipelineTriggers([cron('* * * * *')])]
+    )
+
+
+
+
+
 node {
+    
     stage('Preparation') {
         timestamps {
             echo "Hello World"
