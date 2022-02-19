@@ -19,6 +19,5 @@ node {
         build 'Freestyle1'
     }
     stage('Results') {
-        emailext body: 
     }
 }
