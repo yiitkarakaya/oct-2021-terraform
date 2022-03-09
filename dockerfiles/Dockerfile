@@ -1,11 +1,12 @@
 # Pulls centos 7 image
-FROM  centos:7
+FROM  farrukhsadykov/webapp:4
 
 # Install telnet
 RUN yum install telnet -y && \
     yum install httpd httpd-tools -y  && \
-    mkdir folder  &&         \
-    touch file  && \
+    mkdir -p folder  &&         \
+    touch file  && \ 
+    yum update -y && \ 
     yum install unzip -y
 
 # Set environment variable 
