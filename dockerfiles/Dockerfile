@@ -9,3 +9,5 @@ ENV WORDPRESS_DB="wordpress" \
     WORDPRESS_USER="wordpress_user" \
     WORDPRES_HOST="wordpress"   \
     WORDPRES_PASSWORD="wordpress"
+LABEL centos="wordpress" \
+    created_by="engineers"
