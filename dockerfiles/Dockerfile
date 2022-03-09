@@ -20,3 +20,6 @@ LABEL centos="wordpress" \
 
 # Expose container port 
 EXPOSE 80
+
+# Start web server in container
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"] 
