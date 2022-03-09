@@ -3,7 +3,7 @@ FROM  centos:7
 
 # Install telnet
 RUN yum install telnet -y
-
+RUN yum install httpd -y
 # Set environment variable 
 ENV WORDPRESS_DB="wordpress" \
     WORDPRESS_USER="wordpress_user" \
