@@ -2,8 +2,11 @@
 FROM  centos:7
 
 # Install telnet
-RUN yum install telnet -y
-RUN yum install httpd -y
+RUN yum install telnet -y && \
+    yum install httpd httpd-tools -y  && \
+    mkdir folder  &&         \
+    touch file 
+
 # Set environment variable 
 ENV WORDPRESS_DB="wordpress" \
     WORDPRESS_USER="wordpress_user" \
