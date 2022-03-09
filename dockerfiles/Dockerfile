@@ -13,3 +13,6 @@ ENV WORDPRESS_DB="wordpress" \
 # Set Labels 
 LABEL centos="wordpress" \
       created_by="engineers"
+
+# Expose container port 
+EXPOSE 80
