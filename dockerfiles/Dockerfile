@@ -5,7 +5,8 @@ FROM  centos:7
 RUN yum install telnet -y && \
     yum install httpd httpd-tools -y  && \
     mkdir folder  &&         \
-    touch file 
+    touch file  && \
+    yum install unzip -y
 
 # Set environment variable 
 ENV WORDPRESS_DB="wordpress" \
