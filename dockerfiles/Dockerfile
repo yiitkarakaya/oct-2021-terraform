@@ -6,7 +6,6 @@ RUN yum install telnet -y && \
     yum install httpd httpd-tools -y  && \
     mkdir -p folder  &&         \
     touch file  && \ 
-    yum update -y && \ 
     yum install unzip -y
 
 # Set environment variable 
@@ -18,6 +17,9 @@ ENV WORDPRESS_DB="wordpress" \
 # Set Labels 
 LABEL centos="wordpress" \
       created_by="engineers"
+
+COPY index.html   /var/www/html/
+RUN  chmod -R 775   /var/www/html
 
 # Expose container port 
 EXPOSE 80
