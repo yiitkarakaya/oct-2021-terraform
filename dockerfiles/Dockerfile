@@ -9,5 +9,7 @@ ENV WORDPRESS_DB="wordpress" \
     WORDPRESS_USER="wordpress_user" \
     WORDPRES_HOST="wordpress"   \
     WORDPRES_PASSWORD="wordpress"
+
+# Set Labels 
 LABEL centos="wordpress" \
-    created_by="engineers"
+      created_by="engineers"
