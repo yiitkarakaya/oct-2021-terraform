@@ -4,4 +4,5 @@ services:
     image: farrukhsadykov/artemis:0.0.5
 
 
-# docker-compose -f artemis.yaml up -d 
+#  docker-compose -f artemis.yaml config 
+#  docker-compose -f artemis.yaml up -d 
