@@ -14,6 +14,11 @@ services:
     image: redis
   mysql:
     image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
     
     # deploy:
     #   mode: replicated
