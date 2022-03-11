@@ -23,7 +23,7 @@ services:
   wordpress:
     depends_on:
     - mysql
-    image: wordpress:4.9.0
+    image: wordpress:4.9.1
     ports:
     - "80:80"
     restart: always
