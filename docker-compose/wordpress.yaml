@@ -27,6 +27,8 @@ services:
     ports:
     - "80:80"
     restart: always
+    volumes:
+    - app_data:/var/www/html
     environment:
     - WORDPRESS_DB_HOST=mysql:3306
     - WORDPRESS_DB_USER=wordpress
