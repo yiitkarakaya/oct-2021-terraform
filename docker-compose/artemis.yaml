@@ -2,3 +2,6 @@ version: '3'
 services:
   artemis: 
     image: farrukhsadykov/artemis:0.0.5
+
+
+# docker-compose -f artemis.yaml up -d 
