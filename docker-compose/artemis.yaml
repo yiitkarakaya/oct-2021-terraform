@@ -1,9 +1,21 @@
 version: '3'
+volumes:
+  artemislogs: {}
+
+
 services:
   artemis: 
     image: farrukhsadykov/artemis:0.0.5
     ports:
       - "5000:5000"
+    volumes:
+    - artemislogs:/var/log
+    
+    # deploy:
+    #   mode: replicated
+    #   replicas: 3
+
+
 
 #  docker-compose -f artemis.yaml config 
 #  docker-compose -f artemis.yaml up -d 
