@@ -5,6 +5,9 @@ volumes:
   redistmp: {}
 services:
   artemis: 
+    depends_on:
+    - redis
+    - mysql
     image: farrukhsadykov/artemis:0.0.5
     ports:
       - "5000:5000"
@@ -16,6 +19,8 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
   redis:
+    depends_on:
+    - mysql
     image: redis
     volumes:
     - redislogs:/var/log
