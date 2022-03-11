@@ -1,8 +1,8 @@
 version: '3'
 volumes:
   artemislogs: {}
-
-
+  redislogs:  {}
+  redistmp: {}
 services:
   artemis: 
     image: farrukhsadykov/artemis:0.0.5
@@ -17,6 +17,9 @@ services:
       MYSQL_PASSWORD: wordpress
   redis:
     image: redis
+    volumes:
+    - redislogs:/var/log
+    - redistmp:/tmp
   mysql:
     image: mysql
     environment:
